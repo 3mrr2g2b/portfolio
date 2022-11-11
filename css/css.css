@@ -1,11 +1,11 @@
 @font-face{
     font-family:'a';
-    src:url("/fonts/free_font_12.ttf");
+    src:url("../fonts/free_font_12.ttf");
     font-weight:bold;
 }
 @font-face{
     font-family:'b';
-    src:url("/fonts/ae_Metal.ttf");
+    src:url("../fonts/ae_Metal.ttf");
     font-weight:bold;
 }
 @font-face
