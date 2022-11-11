@@ -1,0 +1,658 @@
+@font-face{
+    font-family:'a';
+    src:url("/fonts/free_font_12.ttf");
+    font-weight:bold;
+}
+@font-face{
+    font-family:'b';
+    src:url("../fonts/ae_Metal.ttf");
+    font-weight:bold;
+}
+@font-face
+{
+    font-family:'c';
+    src:url("/fonts/virgo.ttf");
+    font-weight:bold;
+}
+
+
+:root {
+    --back-color : #eeeff3;
+    --font-color : #292930;
+    --box-shadow-1:#000000;
+    --change-color: #6379FF;
+    --color-of-transparent: #c6c6c6;
+    --of-white: #6e6e6e;
+    --first-color: #6379FF;
+    --secode-color: #16A085;
+    --third-color: #EA384D;
+    --forth-color: #FF8008;
+    --fifth-color: #FAACA8;
+}
+
+*{
+     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    font-family: a,b;
+    background: #eeeff3;
+    color: #2929230;
+    transition: 0.5s;
+    margin: 0;
+    padding: 0;
+}
+body.active{
+    background: #292930;
+    color: #eeeff3;
+}
+body.change-dir{
+    direction: rtl;
+}
+.dark-mode {
+    --back-color : #292929;
+    --font-color : #c1c1c1;
+    transition: 0.5s;
+}
+.navbar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.navbar .container .lang{
+    font-family: c,b;
+    position: relative;
+    margin: -45px 10px;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+.navbar .container .lang p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: c,b;
+    font-size: 30px;
+    color: var(--of-white);
+    display: block;
+    transition: 0.5s;
+}
+.navbar .container .lang p:nth-child(1){
+    margin: 30px 10px;
+    display: block;
+}
+.navbar .container .lang p:nth-child(1).active{
+    margin: 30px 10px;
+    display: none;
+}
+.navbar .container .lang p:nth-child(2){
+    display: none;
+    margin-top: 50px;
+    
+}
+.navbar .container .lang p:nth-child(2).active {
+    display: block;
+}
+.navbar label {
+    margin: 10px;
+}
+.navbar label input[type='checkbox']{
+    webkit-appearance:none;
+    visibility: hidden;
+    display: none;
+}
+.navbar label input[type='checkbox']:checked ~ .check{
+    background: #eeeff3;
+    z-index: -1;
+}
+.navbar label .check{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background:#093e3c;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+.navbar label .check:before{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+}
+.navbar label input[type='checkbox']:checked ~ .check:before{
+    transform: translateX(-50px);
+}
+.navbar label .check:after{
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    width: 16px;
+    height: 16px;
+    background: #292929;
+    border-radius: 50%;
+    transform: translateX(-50px);
+}
+.navbar label input[type='checkbox']:checked ~ .check:after{
+    transform: translateX(0px);
+}
+.navbar .logo {
+    font-size: 35px;
+    margin-left: 10px;
+    margin: 10 20px 10px 10px;
+    font-family: c,b;
+    color: var(--change-color);
+}
+.navbar .logo.activ{
+    font-size: 25px;
+    margin: ;
+    width: 100px;
+    height: 50px;
+}
+.navbar .ul{
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    z-index: 6;
+}
+.navbar .ul .li{
+    list-style: none;
+    margin: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+/* header design settings*/
+.header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header div {
+    margin: 10px 20px;
+    width: 100%;
+    font-family: c,b;
+}
+.header .change-color {
+    color: var(--change-color);
+}
+.header .con-2 .img {
+    background: var(--change-color);
+    width: 100%;
+    height: 400px;
+}
+.header .con-1{
+        text-align: center;
+        font-family: c,b;
+    }
+.header .con-1 .btn {
+    text-decoration: none;
+    padding: 20px 40px;
+    background: var(--change-color);
+    color: #fff;
+    width: 200px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.header .con-2 .img{
+        width: 50vw;
+        height: 30vh;
+        margin: 0;
+        padding: 0;
+        border-radius: 65% 35% 34% 66% / 67% 30% 70% 33% ;
+    }
+.header .con-2 .img img{
+        width: 100%;
+        height: 100%;
+    }
+/* close header settings */
+
+/* =======my works style=======*/
+.works{
+    margin: 0;
+    padding: 0;
+}
+.works .headline{
+    width: 100%;
+    text-align: center;
+    color: var(--color-of-transparent);
+    margin-top: 50px;
+}
+.works .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.works .content .box.active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 1) 0px 8px 16px -8px;
+
+}
+.works .content .box{
+    width: 250px;
+    height: 470px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: relative;
+    margin: 10px 10px;
+    overflow: hidden;
+}
+.works .content .box img {
+    width:100%;
+    height: 50%;
+}
+.works .content .box h2{
+    color: var(--of-white);
+    margin: 10px;
+}
+.works .content .box h3{
+    color: var(--of-white);
+    margin: 10px;
+}
+.works .content .box p{
+    color: var(--of-white);
+    margin: 10px 20px;
+    font-size: 14px;
+}
+.works .content .box p.active{
+    margin: 0 20px;
+}
+.works .content .box .btn{
+    text-decoration: none;
+    margin: 10px 20px;
+    padding: 10px ;
+    background: var(--change-color);
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 85%;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* =======end works style=======*/
+/* =======skills Style==========*/ 
+.skilles {
+        margin: 0;
+        padding: 0;
+    }
+.skilles h1{
+        text-align: center;
+        color: var(--of-white);
+        margin: 40px 0;
+    }
+.skilles .content-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+.skilles .content-box .box.active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 1) 0px 8px 16px -8px;
+
+}
+.skilles .content-box .box{
+    width: 400px;
+    height: 100px;
+    color: var(--of-white);
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: left;
+    font-size: 30px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.skilles .content-box .box i{
+    margin: 10px 20px;
+}
+.skilles .content-box .box:nth-child(1) i{
+    color: var(--firat-color);
+}
+.skilles .content-box .box:nth-child(2) i{
+    color: var(--secode-color);
+}
+.skilles .content-box .box:nth-child(3) i{
+    color: var(--third-color);
+}
+.skilles .content-box .box:nth-child(1) span{
+    background: var(--first-color);
+}
+.skilles .content-box .box:nth-child(2) span{
+    background: var(--secode-color);
+}
+.skilles .content-box .box:nth-child(3) span{
+    background: var(--third-color);
+}
+.skilles .content-box .box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--change-color);
+    border-radius: 10px;
+}
+/* skilles content-box-2 */
+.skilles .content-box-2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+.skilles .content-box-2 .box.active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 1) 0px 8px 16px -8px;
+
+}
+.skilles .content-box-2 .box{
+    width: 400px;
+    height: 100px;
+    color: var(--of-white);
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: left;
+    font-size: 30px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.skilles .content-box-2 .box i{
+    margin: 10px 20px;
+}
+.skilles .content-box-2 .box:nth-child(1) i{
+    color: var(--forth-color);
+}
+.skilles .content-box-2 .box:nth-child(2) i{
+    color: var(--fifth-color);
+}
+.skilles .content-box-2 .box:nth-child(3) i{
+    color: var(--third-color);
+}
+.skilles .content-box-2 .box:nth-child(1) span{
+    background: var(--forth-color);
+}
+.skilles .content-box-2 .box:nth-child(2) span{
+    background: var(--fifth-color);
+}
+.skilles .content-box-2 .box:nth-child(3) span{
+    background: var(--third-color);
+}
+.skilles .content-box-2 .box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--change-color);
+    border-radius: 10px;
+}
+/* =======End skills Style=======*/ 
+/* =======Connwct Style=========*/ 
+.connect{
+    margin: 0;
+    padding: 0;
+}
+.connect h1{
+    margin: 50px 0;
+    padding: 0;
+    color: var(--of-white);
+    text-align: center;
+}
+.connect .container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .......div-connect.......*/
+.connect .container .div-connect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px 10px 10px 10px;
+    height: auto;
+}
+.connect .container .div-connect .content-box{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin:10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--change-color);
+}
+.connect .container .div-connect .content-box input[type='text'],input[type='datetime']{
+    display: block;
+    border: 1px solid rgba(99,121,255,0.7);
+    width: 100%;
+    height: auto;
+    outline: none;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 20px;
+    background: transparent;
+}
+.connect .container .div-connect .content-box .button{
+    display: block;
+    border: 1px solid rgba(99,121,255,0.7);
+    width: 100%;
+    height: auto;
+    outline: none;
+    padding: 15px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    background: var(--change-color);
+    font-size: 20px;
+    font-family: c,b;
+    color: #fff;
+}
+.connect .container .div-connect .content-box .content{
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+::placeholder {
+    margin-left: -20px;
+    color: var(--of-white);
+    font-weight: bold;
+}
+/* ......div-detailes...... */
+.connect .container .box-detailes{
+    padding: 0;
+    margin: 10px;
+}
+.connect .container .box-detailes .box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    border: 1px solid var(--change-color);
+    border-radius: 10px;
+    margin: 10px 20px;
+}
+.connect .container .box-detailes .box .contain{
+    font-size: 30px;
+    text-align: center;
+    background: var(--change-color);
+    padding:20px;
+    color: #fff;
+    border-radius: 10px;
+    position: relative;    
+    display: flex;
+    margin: 10px;
+}
+.connect .container .box-detailes .box i{
+    
+}
+.connect .container .box-detailes .box i.active{
+    
+    
+    
+}
+.connect .container .box-detailes .box .detailes{
+    padding: 0;
+    margin:0 10px;
+}
+.connect .container .box-detailes .box .detailes h3{
+    margin: 10px 20px;
+    font-size: 30px;
+}
+.connect .container .box-detailes .box .detailes p{
+    margin: 10px 20px;
+}
+/* =======End connect Style=======*/ 
+/* =======bottom-stand Style=======*/ 
+.bottom-stand{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: var(--change-color);
+    color: #fff;
+}
+/* =======End bottom-stand Style=======*/ 
+
+
+
+
+@media screen and (max-width: 440px)and (max-width:520px) and (max-width : 640px) and (max-width : 720px) and (max-width:850px) {
+    .navbar.active{
+        margin: -20px 0 0 0;
+    }
+    .navbar .ul{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 90%;
+        margin: 20px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: right;
+        box-shadow:0 0 2px 0 var(--box-shadow-1);
+        background: var(--back-color);
+        color: var(--font-color);
+    }
+    .navbar .ul .li{
+        font-size: 14px;
+        padding: 5px;
+        margin: 15px ;
+        text-align: center;
+        
+    }
+    .navbar .logo {
+        margin-top: -20px;
+    }
+/* ===========header==========    */
+    .header {
+        grid-template-columns: auto;
+        display: grid;
+        grid-template-rows: auto;
+        margin: 4rem 0 0 0 ;
+    }
+    .header .con-1{
+        text-align: center;
+        margin: 0;
+    }
+    .header .con-1 p{
+        text-align: center;
+        font-size: 12;
+    }
+    .header .con-2 .img{
+        width: 70vw;
+        height: 50vh;
+        margin: 20px 0 0 0;
+        padding: 0;
+        border-radius: 65% 35% 34% 66% / 67% 30% 70% 33% ;
+    }
+    .header .con-2 .img img{
+        width: 100%;
+        height: 100%;
+    }
+/* ===========works==========    */
+    .works .content {
+        grid-template-columns: auto;
+        display: grid;
+        grid-template-rows: auto;
+    }
+    .works .content .box {
+        margin-top: 30px;
+    }
+/* ============skills=========   */
+    .skilles .content-box {
+        display: inline-block;
+    }
+    .skilles .content-box .box{
+        margin: 20px;
+        padding: 10px 20px;
+        font-size: 22px;
+        width: 320px;
+    }
+    .skilles .content-box .box i{
+        font-size: 35px;
+    }
+    .skilles .content-box-2 {
+        display: inline-block;
+    }
+    .skilles .content-box-2 .box{
+        margin: 20px;
+        padding: 10px 20px;
+        font-size: 22px;
+        width: 320px;
+    }
+    .skilles .content-box-2 .box i{
+        font-size: 35px;
+    }
+/* ============connect=========   */
+    .connect .container{
+        display: block;
+        margin: 0;
+    }
+    .connect .container .div-connect{
+        margin: 0;
+        width: 100%;
+    }
+    .connect .container .content-box{
+        margin: 20px;
+        width: 100%;
+    }
+    .connect .container .div-connect .content{
+        margin: 0;
+        width: 100%;
+    }
+    .connect .container .box-detailes .box .detailes i{
+        
+    }
+    .connect .container .box-detailes .box .detailes h3{
+        margin: 10px 20px;
+        font-size: 20px;
+    }
+    .connect .container .box-detailes .box .detailes p{
+        margin: 10px 20px;
+    }
+    
+    
+}
