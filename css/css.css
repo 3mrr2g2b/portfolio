@@ -532,6 +532,20 @@ body.change-dir{
     background: var(--change-color);
     color: #fff;
 }
+.bottom-stand .social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-stand .social a{
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+}
+
 /* =======End bottom-stand Style=======*/ 
 
 
