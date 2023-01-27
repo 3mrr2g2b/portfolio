@@ -1,5 +1,18 @@
-    
+
+var my_var;
+            function mine(){
+                my_var = setTimeout(pageLoader,3000);
+            }
+            function pageLoader(){
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('hideAll').style.display = 'block';
+            }
     $(document).ready(function(){
+        
+        //....hide loadee.....
+        
+        
+        
     $("#btn").click(function(){
           $('html,body').animate({scrollTop:630},1000);
       });
@@ -30,6 +43,9 @@
 		    "connect":"Connect",
 		    "welcome":"Welcome In The World of UI/UX Designs",
 		    "download":"Download CV",
+		    "aboutProfile":"Profile",
+		    "profileName":"Amr Ragab Ali",
+		    "about-profile":"I'm FrontEnd Developer,Graduated from the Faculty of Specific Education, Minia University, Education Technology, looking forward to working in the best companies, works as a freelancer, has seven years of experience, can work in a work team consisting of several individuals, the possibility of working on projects according to the budget",
 		    "myworks":"My Works",
 		    "japanes-anime":"Japanes Anime website",
 		    "feature":"Features : ",
@@ -65,6 +81,9 @@
 		    "connect":"إتصل بى",
 		    "welcome":"مرحبا بك فى عالم الديزاين الخاص بى",
 		    "download":"تحميل CV",
+		    "aboutProfile":"بروفايل",
+		    "profileName":"عمرو رجب على محمد",
+		    "about-profile":"أنا مصمم ومطور مواقع ، تخرج من كلية التربية النوعية،جامعة المنيا، تكنولوجيا التعليم ، أتطلع إلى العمل في أفضل الشركات ، ويعمل كفرد مستقل،ولديه خبرة سبع سنوات،ويمكنه العمل في فريق عمل يتكون من عدة أفراد،وإمكانية تطوير وعمل في مشاريع وفقًا للميزانية",
 		    "myworks":"أعمالى",
 		    "japanes-anime":"موقع إنمى يابانى",
 		    "feature":"المميزات :",
