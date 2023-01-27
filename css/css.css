@@ -50,6 +50,68 @@ body.active{
 body.change-dir{
     direction: rtl;
 }
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    background: var(--back-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader .loader-r{
+    margin: 2px;
+}
+.loader .loader-r .loader-{
+    margin: 2px;
+    display: flex;
+}
+.loader .loader-r .loader- span{
+    width: 10px;
+    height: 10px;
+    background: var(--change-color);
+    margin: 2px;
+    animation: animation-loader 1.5s linear infinite ;
+}
+.loader .loader-r .loader-:nth-child(1) span:nth-child(1){
+    animation-delay: 0.4s;
+}
+.loader .loader-r .loader-:nth-child(1) span:nth-child(2){
+    animation-delay: 0.6s;
+}
+.loader .loader-r .loader-:nth-child(2) span:nth-child(1){
+    animation-delay: 0.6s;
+}
+.loader .loader-r .loader-:nth-child(1) span:nth-child(3){
+    animation-delay: 0.8s;
+}
+.loader .loader-r .loader-:nth-child(2) span:nth-child(2){
+    animation-delay: 0.8s;
+}
+.loader .loader-r .loader-:nth-child(3) span:nth-child(1){
+    animation-delay: 0.8s;
+}
+.loader .loader-r .loader-:nth-child(2) span:nth-child(3){
+    animation-delay: 1s;
+}
+.loader .loader-r .loader-:nth-child(3) span:nth-child(2){
+    animation-delay: 1s;
+}
+.loader .loader-r .loader-:nth-child(3) span:nth-child(3){
+    animation-delay: 1.2s;
+}
+@keyframes animation-loader{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+.hideAll {
+    display: none;
+}
 .dark-mode {
     --back-color : #292929;
     --font-color : #c1c1c1;
@@ -161,7 +223,7 @@ body.change-dir{
 }
 .navbar .logo.activ{
     font-size: 25px;
-    margin: ;
+    margin: 10px;
     width: 100px;
     height: 50px;
 }
@@ -227,6 +289,44 @@ body.change-dir{
     }
 /* close header settings */
 
+/* =======up to profile style=======*/
+.profile {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile .cover {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.profile .cover img {
+    width: 450px;
+    height: 450px;
+    border: 3px solid #fff;
+    border-radius: 4px;
+    margin:30px 20px;
+    padding: 0;
+}
+.profile .content{
+    width: 100%;
+    height: 100%;
+    margin-top:0 -50px;
+}
+.profile .content h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+.profile .content p{
+    font-size: 30px;
+    width: 90%;
+}
+/* ======= End profile style=======*/
 /* =======my works style=======*/
 .works{
     margin: 0;
@@ -606,6 +706,45 @@ body.change-dir{
         width: 100%;
         height: 100%;
     }
+/* =======up to profile style=======*/
+.profile {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.profile .cover {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.profile .cover img {
+    width: 250px;
+    height: 250px;
+    border: 3px solid #fff;
+    border-radius: 4px;
+    margin:0;
+    padding: 0;
+}
+.profile .content{
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+.profile .content h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.profile .content p{
+    font-size: 20px;
+    width: 100%;
+}
+/* ======= End profile style=======*/
+
 /* ===========works==========    */
     .works .content {
         grid-template-columns: auto;
