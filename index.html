@@ -1,241 +1,372 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <meta name="theme-color" content="#334756">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>my website </title>
-    <link rel="stylesheet" href="css/css.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="fontawesome-free/css/all.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/aos.css" type="text/css" media="all" />
-    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/index.js" type="text/javascript"></script>
-    <script src="js/typewritter.js" type="text/javascript"></script>
-    <script src="js/skrollr.js"></script>
-    <script src="js/vue.min.js"></script>
-  </head>
-  <body onload="mine()">
-      <div class="loader" id="loader">
-          <div class="loader-r">
-         <div class=" loader-">
-             <span></span>
-             <span></span>
-             <span></span>
-         </div>
-         <div class="loader-">
-             <span></span>
-             <span></span>
-             <span></span>
-         </div>
-         <div class=" loader-">
-             <span></span>
-             <span></span>
-             <span></span>
-         </div>
-         
-          </div>
-      </div>
-<!--...........Hide All Categories  ......-->
-      <div class="hideAll" id="hideAll">
-          
-        <div class="navbar">
-          <div class="logo">
-              <!--img class="logo-img" src="images/logo.png" alt="" /-->
-              <p class="lang" key='logo'>Amr</p>
-          </div>
-<!--           ul lis-->          
-            <ul class="ul">
-              <li class="li lang" key='home'>Home</li>
-                  <li class="li lang" key='works'>Works</li>
-                  <li class="li lang" key='skilles'>Skilles</li>
-              <li class="li lang" key='connect'>Connect</li>
-             
-            </ul>
-            <div class="container">
-                 <div class="lang">
-                     <p class="translate" id="ar">ع</p>
-                     <p class="translate" id="en">En</p>
-                 </div> 
-                <label id="label">
-                    <input type="checkbox" name="" id="" value="" />
-                    <span class="check"></span>
-                 </label>
-            </div>
-      </div>
-<!--............header...........-->
-        <div class="header">
-          <div class="con-2">
-              <div class="img" >
-                  <img  src="images/header-img.png" alt="" />
-              </div>
-          </div>
-          <div class="con-1">
-              
-              <h1 class="h1">Amr Prot<span class='change-color'>folio</span></h1>
-              <p key='welcome' class="lang">Welcome In The World of <span class="change-color">UI/UX</span> Designs</p>
-              <br />
-              <br />
-              <a  class="btn lang" key='download' href="index.html">Download CV</a>
-          </div> 
-      </div>
-<!--..............Main Portfolio..........-->
-        <h1 class="lang aboutprofileHeadline" key='aboutProfile'>Profile</h1>
-        <div class="profile ">
-            <div class="cover">
-                <img src="images/main_profile.webp" alt="" />
-            </div>
-            <div class="content">
-                <h2 class="lang" key='profileName'>Amr Ragab Ali</h2>
-                <p class="lang" key='about-profile'>I'm FrontEnd Developer <span class="change-color">UI/UX</span> ,Graduated from the Faculty of Specific Education, Minia University, Education Technology, looking forward to working in the best companies, works as a freelancer, has seven years of experience, can work in a work team consisting of several individuals, the possibility of working on projects according to the budget</p>
-            </div>
-        </div>
-<!--    ........my works......   -->  
-        <div class="works ">
-            <div class="headline">
-                <h1  class="lang" key='myworks'>My Works</h1>
-            </div>
-            <div class="content">
-                <div  class="box"  >
-                    <img src="https://i.imgur.com/t6Mc7xy.png" alt="image" />
-                    <h2 class="lang" key='japanes-anime'>Japanes Anime website</h2>
-                    <h3 class="lang" key='feature'>Features : </h3>
-                    <p class="lang" key='api'>using API Ajax and Animation</p>
-                    <p class="lang" key='mode'>Dark/Light Mode</p>
-                    <p class="lang" key='responsive'>Responsive Website</p>
-                    
-                    <a href="#" class="btn lang" key='preview'>Preview</a>
-                </div>
-                <div class="box" >
-                    <img src="/images/img2.webp" alt="image" />
-                    <h2 class="lang" key='creative'>Creative Website</h2>
-                    <h3 class="lang" key='feature'>Features : </h3>
-                    <p class="lang" key='ar/en'>using Ar/En and Animation</p>
-                    <p class="lang" key='responsive'>Responsive Website</p>
-                    
-                    <a href="#" class="btn lang" key='preview'>Preview</a>
-                </div>
-                <div class="box" >
-                    <img src="/images/img3.webp" alt="image" />
-                    <h2 class="lang" key='toggle'>Animation Toggle</h2>
-                    <h3 class="lang" key='feature'>Features : </h3>
-                    <p class="lang" key='api'>using API Ajax and Animation</p>
-                    <p class="lang" key='mode'>Dark/Light Mode</p>
-                    <p class="lang" key='responsive'>Responsive Website</p>
-                    
-                    <a href="#" class="btn lang" key='preview'>Preview</a>
-                </div>
-                <div class="box" >
-                    <img src="/images/img4.webp" alt="image" />
-                    <h2 class="lang" key='phronic'>Phronic Box</h2>
-                    <h3 class="lang" key='feature'>Features : </h3>
-                    <p class="lang" key='responsive'>Responsive Website</p>
-                    
-                    <a href="#" class="btn lang" key='preview'>Preview</a>
-                </div>
-                
-            </div>
-        </div>
-<!--............Skilles..........-->
-        <div class="skilles">
-            <h1 class="lang" key='myskilles'>My Skilles</h1>
-            <div class="content-box">
-                <div class="box">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#334756" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>my website</title>
+        <link rel="stylesheet" href="css/css.css" type="text/css" media="all" />
+        <link
+            rel="stylesheet"
+            href="fontawesome-free/css/all.css"
+            type="text/css"
+            media="all"
+        />
+        <link rel="stylesheet" href="css/aos.css" type="text/css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="/modules/aos.js"></script>
+
+        <script
+            src="js/jquery.min.js"
+            type="text/javascript"
+            charset="utf-8"
+        ></script>
+        <script src="js/index.js" type="text/javascript"></script>
+        <script src="js/typewritter.js" type="text/javascript"></script>
+        <script src="js/skrollr.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    </head>
+    <body onload="mine()">
+        <div class="loader" id="loader">
+            <div class="loader-r">
+                <div class="loader-">
                     <span></span>
-                    <i class="fas fa-paint-brush"></i>
-                    <p class="lang" key='ui/ux'>UI/UX</p>
-                </div>
-                <div class="box">
                     <span></span>
-                    <i class="fas fa-code"></i>
-                    <p class="lang" key='web-dev'>Web Developer</p>
-                </div>
-                <div class="box">
                     <span></span>
-                    <i class="fab fa-pushed"></i>
-                    <p class="lang" key='photoshop'>Design Photoshop</p>
                 </div>
-    
-            </div>
-            <div class="content-box-2">
-                <div class="box">
+                <div class="loader-">
                     <span></span>
-                    <i class="fab fa-maxcdn"></i>
-                    <p class='lang' key='markting'>Degital Markting</p>
+                    <span></span>
+                    <span></span>
                 </div>
-                <div class="box">
+                <div class="loader-">
                     <span></span>
-                    <i class="fas fa-wrench"></i>
-                    <p class="lang" key='essential'>Essential Work Skilles</p>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
-<!--............connect with me..........-->
-        <div class="connect">
-            <h1 class="lang" key='connect'>Connect Me</h1>
-            <div class="container">
-                <div class="div-connect">
-                    <div class="content-box">
-                        <form action="php/send.php" method="post" accept-charset="utf-8">
+        <!--...........Hide All Categories  ......-->
+        <div class="hideAll" id="hideAll">
+            <div class="navbar">
+                <div class="logo">
+                    <!--img class="logo-img" src="images/logo.png" alt="" /-->
+                    <p class="lang" key="logo">Amr</p>
+                </div>
+                <!--           ul lis-->
+                <ul  class="ul">
+                    <li class="li lang" key="home">Home</li>
+                    <li class="li lang" key="works">Works</li>
+                    <li class="li lang" key="skilles">Skilles</li>
+                    <li class="li lang" key="connect">Connect</li>
+                </ul>
+                <div class="container">
+                    <div class="lang">
+                        <p class="translate" id="ar">ع</p>
+                        <p class="translate" id="en">En</p>
+                    </div>
+                    <label id="label">
+                        <input type="checkbox" name="" id="" value="" />
+                        <span class="check"></span>
+                    </label>
+                </div>
+            </div>
+            <!--............multi color...........-->
+           <!--  <div class="multi-color">
+               <div class="button-main">
+                   <i class="far fa-sun"></i>
+               </div>
+               <div class="buttons">
+                   <div class="btn-color"></div>
+                   <div class="btn-color"></div>
+                   <div class="btn-color"></div>
+                   <div class="btn-color"></div>
+               </div>
+           </div> -->
+            <!--............header...........-->
+            <div class="header">
+                <div class="con-2">
+                    <div class="img">
+                        <img src="images/header-img.png" alt="" />
+                    </div>
+                </div>
+                <div class="con-1">
+                    <h1 class="h1" >
+                        Amr Prot<span class="change-color">folio</span>
+                    </h1>
+                    <h1 id="typewriter"></h1>
+                    <p  key="welcome" class="lang">
+                        Welcome In The World of
+                        <span class="change-color">UI/UX</span> Designs
+                    </p>
+                    <br />
+                    <br />
+                    <a class="btn lang" key="download" href="index.html"
+                        >Download CV</a
+                    >
+                </div>
+            </div>
+            <!--..............Main Portfolio..........-->
+            <div class="profile">
+                <div class="cover"></div>
+                <div  class="content">
+                    <h2 class="lang card" key="profileName">About Me</h2>
+                    <p class="lang about-me-text" key="about-profile">
+                        I'm FrontEnd Developer
+                        <span class="change-color">UI/UX</span> ,Graduated from
+                        the Faculty of Specific Education, Minia University,
+                        Education Technology, looking forward to working in the
+                        best companies, works as a freelancer, has seven years
+                        of experience, can work in a work team consisting of
+                        several individuals, the possibility of working on
+                        projects according to the budget
+                    </p>
+                </div>
+            </div>
+            
+            <!--    ........my works......   -->
+            <div class="works">
+                <div class="headline">
+                    <h1 class="lang" key="myworks">My Works</h1>
+                </div>
+                <div class="content">
+                    <div class="box">
+                        <img src="images/img1.webp" alt="image" />
+                        <h2 class="lang" key="japanes-anime">
+                            Japanes Anime website
+                        </h2>
+                        <h3 class="lang" key="feature">Features :</h3>
+                        <p class="lang" key="api">
+                            using API Ajax and Animation
+                        </p>
+                        <p class="lang" key="mode">Dark/Light Mode</p>
+                        <p class="lang" key="responsive">Responsive Website</p>
+                        <div class="buttons">
+                            <a href="https://3mrr2g2b.github.io/Animation-website/" class="btn preview lang" key="preview"
+                                >Preview</a
+                            >
+                            <a href="https://github.com/3mrr2g2b/Animation-website" class="btn lang" key="github"
+                                >Github</a
+                            >
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="images/img2.webp" alt="image" />
+                        <h2 class="lang" key="creative">Creative Website</h2>
+                        <h3 class="lang" key="feature">Features :</h3>
+                        <p class="lang" key="ar/en">
+                            using Ar/En and Animation
+                        </p>
+                        <p class="lang" key="responsive">Responsive Website</p>
+
+                        <div class="buttons">
+                            <a href="https://3mrr2g2b.github.io/Company-website/" class="btn preview lang" key="preview"
+                                >Preview</a
+                            >
+                            <a href="https://github.com/3mrr2g2b/Company-website" class="btn lang" key="github"
+                                >Github</a
+                            >
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="images/img3.webp" alt="image" />
+                        <h2 class="lang" key="page_not_found">Page Not Found</h2>
+                        <h3 class="lang" key="feature">Features :</h3>
+                        <p class="lang" key="api">
+                            using API Ajax and Animation
+                        </p>
+                        <p class="lang" key="responsive">Responsive Design</p>
+
+                        <div class="buttons">
+                            <a href="https://3mrr2g2b.github.io/PageNotFound/" class="btn preview lang" key="preview"
+                                >Preview</a
+                            >
+                            <a href="https://github.com/3mrr2g2b/PageNotFound/tree/main" class="btn lang" key="github"
+                                >Github</a
+                            >
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="images/img4.webp" alt="image" />
+                        <h2 class="lang" key="phronic">Phronic Box</h2>
+                        <h3 class="lang" key="feature">Features :</h3>
+                        <p class="lang" key="responsive">Responsive Design</p>
+
+                        <div class="buttons">
+                            <a href="https://3mrr2g2b.github.io/Creative-Egyption-card/" class="btn preview lang" key="preview"
+                                >Preview</a
+                            >
+                            <a href="https://github.com/3mrr2g2b/Creative-Egyption-card" class="btn lang" key="github"
+                                >Github</a
+                            >
+                        </div>
+                        
+                    </div>
+                    <div class="box">
+                        <img src="images/img5.webp" alt="image" />
+                        <h2 class="lang" key="php_form">Php From Box</h2>
+                        <h3 class="lang" key="feature">Features :</h3>
+                        <p class="lang" key="responsive">Responsive Project</p>
+                        <p class="lang" key="">using HTML/Php/MySql Databaae</p>
+
+                        <div class="buttons">
+                            <a href="https://3mrr2g2b.github.io/PHP_db/" class="btn preview lang" key="preview"
+                                >Preview</a
+                            >
+                            <a href="https://github.com/3mrr2g2b/PHP_db" class="btn lang" key="github"
+                                >Github</a
+                            >
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!--............Skilles..........-->
+            <div class="skilles">
+                <h1 class="lang" key="myskilles">My Skilles</h1>
+                <div class="content-box">
+                    <div class="box">
+                        <span></span>
+                        <i class="fas fa-paint-brush"></i>
+                        <p class="lang" key="ui/ux">UI/UX</p>
+                    </div>
+                    <div class="box">
+                        <span></span>
+                        <i class="fas fa-code"></i>
+                        <p class="lang" key="web-dev">Web Developer</p>
+                    </div>
+                    <div class="box">
+                        <span></span>
+                        <i class="fab fa-pushed"></i>
+                        <p class="lang" key="photoshop">Design Photoshop</p>
+                    </div>
+                </div>
+                <div class="content-box-2">
+                    <div class="box">
+                        <span></span>
+                        <i class="fab fa-maxcdn"></i>
+                        <p class="lang" key="markting">Degital Markting</p>
+                    </div>
+                    <div class="box">
+                        <span></span>
+                        <i class="fas fa-wrench"></i>
+                        <p class="lang" key="essential">
+                            Essential Work Skilles
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--............connect with me..........-->
+            <div class="connect">
+                <h1 class="lang" key="connect">Connect Me</h1>
+                <div class="container">
+                    <div class="div-connect">
+                        <div class="content-box">
+                            <form
+                                action="php/send.php"
+                                method="post"
+                                accept-charset="utf-8"
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Name *"
+                                    name="name"
+                                    class="lang"
+                                    key="name"
+                                    
+                                />
+                                <div class="content">
+                                    <input
+                                        type="text"
+                                        name="email"
+                                        placeholder="E-mail *"
+                                        
+                                    />
+                                    <input
+                                        type="text"
+                                        placeholder="phone No *"
+                                        name="phone"
+                                    
+                                    />
+                                </div>
+                                <input
+                                    type="datetime"
+                                    placeholder="Select-Topic *"
+                                    name="topic"
+                                
+                                />
+                                <input
+                                    type="submit"
+                                    class="lang button"
+                                    name="submit"
+                                    key="send"
+                                    value="Send Message"
                             
-                        <input type="text" placeholder="Name *" name="name" class="lang" key='name'/>
-                        <div class="content">
-                            <input type="text" name="email" placeholder="E-mail *"/>
-                            <input type="text" placeholder="phone No *" name="phone"/>
+                                />
+                                <h1 name="output"></h1>
+                            </form>
                         </div>
-                        <input type="datetime" placeholder="Select-Topic *" name="topic"/>
-                        <input type="submit" class="lang button" name="submit" key='send' value="Send Message"/>
-                        <h1 name='output'></h1>
-                        </form>
+                    </div>
+                    <div class="box-detailes">
+                        <div class="box">
+                            <div class="contain">
+                                <i class="fas fa-phone icon"></i>
+                            </div>
+                            <div class="detailes">
+                                <h3 class="lang" key="number">Mobile No</h3>
+                                <p class="lang" key="number-txt">
+                                    01141703905 - 01551195026
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="contain">
+                                <i class="fas fa-at"></i>
+                            </div>
+                            <div class="detailes">
+                                <h3 class="lang" key="email">E-mail</h3>
+                                <p>amrragab28090@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="contain">
+                                <i class="fas fa-map-marker-alt icon"></i>
+                            </div>
+                            <div class="detailes">
+                                <h3 class="lang" key="location">Location</h3>
+                                <p class="lang" key="location-txt">
+                                    Egypt-Elminia-Beni Mazar
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="box-detailes">
-                    <div class="box">
-                        <div class="contain">
-                            <i class="fas fa-phone icon"></i>
-                        </div>
-                        <div class="detailes">
-                            <h3 class="lang" key='number'>Mobile No</h3>
-                            <p class="lang" key='number-txt'>01141703905 - 01551195026</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="contain">
-                            <i class="fas fa-at"></i>
-                        </div>
-                        <div class="detailes">
-                            <h3 class="lang" key='email'>E-mail</h3>
-                            <p>amrragab28090@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="contain">
-                        <i class="fas fa-map-marker-alt icon"></i>
-                        </div>
-                        <div class="detailes">
-                            <h3 class="lang" key='location'>Location</h3>
-                            <p class="lang" key='location-txt'>Egypt-Elminia-Beni Mazar</p>
-                        </div>
-                    </div>
-
+            </div>
+            <!--............bottom stand..........-->
+            <div class="bottom-stand">
+                <p class="lang" key="copyright">© 2021 copyright</p>
+                <p class="lang" key="copyright-2">
+                    All rights reversed to Amr Ragab Ali
+                </p>
+                <div class="social">
+                    <a href="https://www.facebook.com/3mrr2g2b?mibextid=ZbWKwL"
+                        ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a
+                        href="https://twitter.com/3mrr2g2b?t=PsUxCZq4kwofppC5BjRiyQ&s=09"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="https://t.me/desygn_Tutorial"
+                        ><i class="fab fa-telegram"></i
+                    ></a>
                 </div>
             </div>
         </div>
-<!--............bottom stand..........-->
-        <div class="bottom-stand">
-            <p class="lang" key='copyright'>© 2021 copyright</p>
-            <p class="lang" key='copyright-2'>All rights reversed to Amr Ragab Ali</p>
-            <div class="social">
-                <a href="https://www.facebook.com/3mrr2g2b?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/3mrr2g2b?t=PsUxCZq4kwofppC5BjRiyQ&s=09"><i class="fab fa-twitter"></i></a>
-                <a href="https://t.me/desygn_Tutorial"><i class="fab fa-telegram"></i></a>
-            </div>
-      </div>
-      </div>
+            <script>
+              AOS.init();
+            </script>
 
-  
-  
-      <script type="text/javascript" charset="utf-8">
-              
-      </script>
-</body>
+    </body>
 </html>
