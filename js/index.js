@@ -11,13 +11,33 @@ var my_var;
         
         //....hide loadee.....
         
+        $(window).bind ('scroll',() =>{
+            if ($(window).scrollTop() > 20) {
+                $('.navbar').addClass ('active');
+            } else {
+                $('.navbar').removeClass ('active');
+            }
+        })
+            
+        $('.card').click(() => {
+            $('.about-me-text').slideToggle();
+        }) ;
         
+        $(".ch_1").click(function(){
         
-    $("#btn").click(function(){
+        $('html,body').animate({scrollTop:10},1000);
+        $('.navbar').css({
+            "poaition":"fiexed"
+            
+        });
+    });
+    
+        
+        $("#btn").click(function(){
           $('html,body').animate({scrollTop:630},1000);
       });
     
-    $('input[type="checkbox"]').click(function(){
+        $('input[type="checkbox"]').click(function(){
            $('body').toggleClass('dark-mode');
            $('body').toggleClass('active');
            $('.box').toggleClass('active');
@@ -44,7 +64,7 @@ var my_var;
 		    "welcome":"Welcome In The World of UI/UX Designs",
 		    "download":"Download CV",
 		    "aboutProfile":"Profile",
-		    "profileName":"Amr Ragab Ali",
+		    "profileName":"About Me",
 		    "about-profile":"I'm FrontEnd Developer,Graduated from the Faculty of Specific Education, Minia University, Education Technology, looking forward to working in the best companies, works as a freelancer, has seven years of experience, can work in a work team consisting of several individuals, the possibility of working on projects according to the budget",
 		    "myworks":"My Works",
 		    "japanes-anime":"Japanes Anime website",
@@ -53,10 +73,12 @@ var my_var;
 		    "mode":"Dark/Light Mode",
 		    "responsive":"Responsive Website",
 		    "preview":"Preview",
+		    "github":"Github",
 		    "creative":"Creative Website ",
 		    "ar/en":"using Ar/En and Animation",
 		    "toggle":"Animation Toggle",
 		    "phronic":"Phronic Box",
+		    "php_form":"Php Form Box",
 		    "myskilles":"My Skilles",
             "ui/ux":"UI/UX",
             "web-dev":"Web Developer",
@@ -82,7 +104,7 @@ var my_var;
 		    "welcome":"مرحبا بك فى عالم الديزاين الخاص بى",
 		    "download":"تحميل CV",
 		    "aboutProfile":"بروفايل",
-		    "profileName":"عمرو رجب على محمد",
+		    "profileName":"عنى",
 		    "about-profile":"أنا مصمم ومطور مواقع ، تخرج من كلية التربية النوعية،جامعة المنيا، تكنولوجيا التعليم ، أتطلع إلى العمل في أفضل الشركات ، ويعمل كفرد مستقل،ولديه خبرة سبع سنوات،ويمكنه العمل في فريق عمل يتكون من عدة أفراد،وإمكانية تطوير وعمل في مشاريع وفقًا للميزانية",
 		    "myworks":"أعمالى",
 		    "japanes-anime":"موقع إنمى يابانى",
@@ -91,10 +113,12 @@ var my_var;
 		     "mode":"الوضع الليلى/النهارى",
 		    "responsive":"موقع متجاوب",
 		    "preview":"مشاهدة",
+		    "github":"جيتهوب",
 		    "creative":"الموقع الإبداعى",
 		    "ar/en":"يستخدم تغيير اللغة والانيميشن",
-		    "toggle":"التبديل الحركى",
+		    "page_not_found":"الصفحة غير موجودة",
 		    "phronic":"القالب الفرعونى",
+		    "php_form":"ملفات داتابيز",
 		    "myskilles":"مهاراتى",
             "ui/ux":"الديزاين",
             "web-dev":"مطور مواقع",
@@ -164,4 +188,12 @@ var my_var;
         //scroll change
     
     // run typewritter jquery
+        $(" #typewriter").typewriter({
+        prefix : "",
+        text : ["UI_UX","Php Databases", "Grafic Designer","Data Entery"],
+        typeDelay : 100,
+        waitingTime : 1500,
+        blinkSpeed : 800
+    });
+
     });
