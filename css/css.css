@@ -28,6 +28,7 @@
     --third-color: #EA384D;
     --forth-color: #FF8008;
     --fifth-color: #FAACA8;
+    --preview-color:#16A085;
 }
 
 *{
@@ -42,10 +43,12 @@ body {
     transition: 0.5s;
     margin: 0;
     padding: 0;
+    
 }
 body.active{
     background: #292930;
     color: #eeeff3;
+    
 }
 body.change-dir{
     direction: rtl;
@@ -54,7 +57,7 @@ body.change-dir{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) rotate(45deg);
     width: 100%;
     height: 100%;
     z-index: 15;
@@ -123,6 +126,16 @@ body.change-dir{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.5s;
+}
+.navbar.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background:var(--back-color);
+    z-index: 999999;
     
 }
 .navbar .container {
@@ -241,6 +254,47 @@ body.change-dir{
     display: inline-block;
 }
 
+/* multi-color design settings*/
+.multi-color{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    background: #fff;
+    padding: 10px;
+    z-index: 999999;
+}
+.multi-color .button-main {
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    font-size: 1.3em;
+    padding: 10px;
+}
+.multi-color .button-main i{
+    animation: spinner 1s linear infinite;
+}
+.multi-color .button-main .buttons{
+    width: 100%;
+    height: 100%;
+}
+.multi-color .button-main .buttons .btn-color{
+    width: 100%;
+    height: 100%;
+}
+@keyframes spinner {
+    from {
+        transform: rotate(0deg) ;
+    }
+    to {
+        transform: rotate(360deg) ;
+    }
+}
+/* close multi-color design settings*/
 /* header design settings*/
 .header {
     margin: 0;
@@ -293,7 +347,7 @@ body.change-dir{
 h1 {
     text-align: center;
     color: var(--of-white);
-    margin: 50px 0;
+    margin: 10px 0;
 }
 .profile {
     width: 100%;
@@ -381,19 +435,27 @@ h1 {
 .works .content .box p.active{
     margin: 0 20px;
 }
-.works .content .box .btn{
+.works .content .box .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+}
+.works .content .box .buttons .btn{
     text-decoration: none;
     margin: 10px 20px;
-    padding: 10px ;
+    padding: 10px 20px;
     background: var(--change-color);
     color: #fff;
     cursor: pointer;
-    position: absolute;
-    bottom: 5px;
+    
     text-align: center;
-    width: 85%;
     border-radius: 20px;
     font-weight: bold;
+}
+.works .content .box .buttons .preview{
+    background: var(--preview-color);
 }
 
 /* =======end works style=======*/
@@ -744,7 +806,19 @@ h1 {
 .profile .content h2{
     font-weight: bold;
     text-align: center;
+    font-size: 30px;
     color: var(--of-white);
+}
+.profile .content .card{
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+    margin: 10px 20px;
+    padding: 15px 0;
+    font-size: 30px;
+    color: var(--of-white);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    animation: about-anim 1s linear infinite;
 }
 .profile .content p{
     font-size: 20px;
